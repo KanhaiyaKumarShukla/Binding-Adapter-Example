@@ -1,0 +1,52 @@
+ --------------------------------------- ** Binding Adapter *** -----------------------------------------------
+
+ * It allows you to bind custom attributes to views in your layout files.
+ * USAGE :-  Android's Data Binding library automatically generates binding classes that bind data from your data model to views in your layout files. However, sometimes you need custom logic to bind
+             certain types of data or perform additional actions during the binding process. Binding Adapters allow you to define this custom logic.
+
+ Here, we are using binding adapter to load images from URL. we are using a third party libraries "Glide", we can use "Picasso" too instead. These 3rd pary app make it easy to display remote images in app's UI.
+ It provides animated GIF support and handles image loading/caching.
+
+ * How to Use Glide Android Library?
+
+  https://www.geeksforgeeks.org/image-loading-caching-library-android-set-2/
+
+ * How to Use Picasso Image Loader Library?
+
+   https://www.geeksforgeeks.org/how-to-use-picasso-image-loader-library-in-android/?ref=lbp
+
+ * Methods of Glide :-
+  1.Glide.with(Context context):
+    This static method initializes a new Glide request with the specified context.
+    It's typically the starting point for loading images with Glide.
+
+  2. load(Object model):
+    The load() method is used to specify the image resource to load.
+    It accepts various types of parameters such as URLs, file paths, resource IDs, URIs, and byte arrays.
+
+  3. placeholder(int resourceId):
+    This method sets a placeholder image to be displayed while the target image is being loaded.
+    It's useful for providing visual feedback to users while waiting for the image to load.
+
+  3. error(int resourceId):
+    The error() method sets an error image to be displayed if the requested image fails to load.
+    It's helpful for handling cases where the requested image is unavailable or fails to load due to network issues.
+
+  4. override(int width, int height):
+    This method specifies the dimensions (in pixels) for the loaded image.
+    It allows you to resize the image to fit specific dimensions, which can be useful for optimizing memory usage and improving performance.
+
+  5. centerCrop():
+    The centerCrop() method scales the image to fill the ImageView while maintaining its aspect ratio.
+    It crops the image if necessary to ensure that both dimensions of the ImageView are filled completely.
+
+  6. fitCenter():
+    This method scales the image to fit within the bounds of the ImageView while maintaining its aspect ratio.
+    It ensures that the entire image is visible within the ImageView without cropping, and it centers the image within the ImageView's bounds.
+
+  7. into(ImageView imageView):
+    The into() method specifies the target ImageView where the loaded image should be displayed.
+    It completes the Glide request and sets the loaded image into the specified ImageView.
+  8. transform(Transformation... transformations):
+    The transform() method applies one or more image transformations to the loaded image before displaying it.
+    It's useful for performing tasks like cropping, resizing, rotating, or applying custom effects to images.
